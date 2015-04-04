@@ -15,3 +15,8 @@
  *= require foundation_and_overrides
 
  */
+
+img[alt="blog-pic"] { 
+  max-width:  200px; 
+  display: block;
+}

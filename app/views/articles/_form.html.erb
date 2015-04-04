@@ -1,4 +1,11 @@
 <%= form_for :article, url: articles_path do |f| %>
+  <% if @article.errors.any? %>
+  <%= "Cannot save due to: #{pluralize(@article.errors.count, "error")}" %>
+  <p><% @article.errors.each do |error,msg| %>
+    <ul id="error"><%= "#{error.capitalize} #{msg}" %></ul>
+    <% end %>
+  </p>
+  <% end %>
   <p>
     <%= f.label :title %>
     <%= f.text_field :title, style: "width: 922px; height: 30px" %>
