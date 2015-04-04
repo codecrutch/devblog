@@ -1,0 +1,13 @@
+<div id="content">
+<h1><%= @article.title %></h1>
+    <ul><small>Author: Sean Snyder<br> Posted: <%= time_ago_in_words(@article.created_at).capitalize + " ago" %></small>
+<p>
+  <%= markdown(@article.body)%>
+</p>
+</div>
+<%= link_to "Home", articles_path %> |
+<%= link_to "Edit", edit_article_path %> |
+<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?"}%>
+<div id="comments">
+<%= render 'disqus' %>
+</div>

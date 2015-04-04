@@ -1,0 +1,10 @@
+<%= form_for :article, url: articles_path do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, style: "width: 922px; height: 30px" %>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, style: "width: 922px; height: 301px" %>
+  <p>
+    <%= f.submit %>
+<% end %>

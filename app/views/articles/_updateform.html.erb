@@ -1,0 +1,10 @@
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, style: "width: 922px; height: 30px" %>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, size: "10x20", style: "width: 922px; height: 301px" %>
+  <p>
+    <%= f.submit %>
+<% end %>
