@@ -12,12 +12,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <div id="content">
-      <%= yield %>
+  <body class='row'>
+    
+    <div class='row'>
+      <%= render 'navbar' %>
     </div>
     
-    <%= render 'commentcounter'%>
+    <div id="page-container" class='row'>
+      <div id="left-side" class='small-2 columns'> Side Bar</div>
+      <div id="content" class='small-10 columns'><%= yield %></div>
+    </div>
+    
+    <%= render 'commentcounter' %>
 
   </body>
 </html>
