@@ -20,3 +20,9 @@ img[alt="blog-pic"] {
   max-width:  200px; 
   display: block;
 }
+
+#content {
+  padding: 200px;
+  border-radius: 200;
+  background: antique;
+}
