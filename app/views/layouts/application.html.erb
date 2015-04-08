@@ -18,9 +18,9 @@
       <%= render 'navbar' %>
     </div>
     
-    <div id="page-container" class='row'>
-      <div id="left-side" class='small-2 columns'> Side Bar</div>
+    <div id="page-container" class='row'>    
       <div id="content" class='small-10 columns'><%= yield %></div>
+      <div id="right-side" class='small-2 columns'></div>  
     </div>
     
     <%= render 'commentcounter' %>

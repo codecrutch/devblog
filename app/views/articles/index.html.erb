@@ -1,14 +1,23 @@
+<br>
 <h1>Articles</h1>
-
-<% @articles.each do |article| %>
-  <strong>
+  <dl class="sub-nav">
+    <dt>Articles</dt>
+      <% @articles.first(4).each do |article| %>
+        <dd><%= link_to "#{article.title}", "##{article.title}" %></dd>
+      <% end %>
+  </dl>
+  
+  <% @articles.each do |article| %>
     <ul>
-      <%= link_to "#{article.title}", article_path(article) %>
-      <%= markdown(article.body) %><br>
+      <h4>
+        <%= link_to "#{article.title}", article_path(article), id: "#{article.title}", style: "padding-top: 50px; margin-top: -40px;" %>
+      </h4>
+      <div class="panel"><%= markdown(article.body) %></div><br>
       <%= link_to "View", article_path(article, anchor: "disqus_thread") %>
     </ul>
     <hr>
-<% end %>
+  <% end %>
 
-<p>
-  <%= link_to "New Article", new_article_path %>
+  <p>
+    <%= link_to "New Article", new_article_path %>
+  </p>
