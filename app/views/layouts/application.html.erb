@@ -12,7 +12,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class='row'>
+  <body class='antialiased hide-extras'>
     
     <div class='row'>
       <%= render 'navbar' %>
@@ -22,8 +22,18 @@
       <div id="content" class='small-10 columns'><%= yield %></div>
       <div id="right-side" class='small-2 columns'></div>  
     </div>
-    
+      
+    <footer>
+      <div id="footer" class="row">
+        <div class="small-4 columns"><p></div>
+        <div class="small-4 columns">Snyder-Dev.com &copy 2015</div>
+        <div class="small-4 columns"><p></div>
+      </div>
+    </footer>
+  
     <%= render 'commentcounter' %>
 
   </body>
+  
+  
 </html>
