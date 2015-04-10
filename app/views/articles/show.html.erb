@@ -1,4 +1,6 @@
 <div id="content">
+  <% content_for(:title) do @article.title %>
+  <% end %>
 <h1><%= @article.title %></h1>
     <ul><small>Author: Sean Snyder<br> Posted: <%= time_ago_in_words(@article.created_at).capitalize + " ago" %></small>
 <p>
