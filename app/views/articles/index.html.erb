@@ -9,14 +9,14 @@
   </dl>
   
   <% @articles.each do |article| %>
+  <article class='website-example'>
     <ul>
-      <h4>
-        <%= link_to "#{article.title}", article_path(article), id: "#{article.title}", style: "padding-top: 50px; margin-top: -40px;" %>
-      </h4>
+      <h4><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h4>
       <div class=""><%= markdown(article.body) %></div><br>
-      <%= link_to "View", article_path(article, anchor: "disqus_thread") %>
+      <button class="button round info"><%= link_to "View", article_path(article, anchor: "disqus_thread") %></button>
     </ul>
     <hr>
+  </article>
   <% end %>
 
   <p>
