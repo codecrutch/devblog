@@ -1,24 +1,24 @@
 <br>
 <%= content_for(:title) { "Articles" }%>
 <h1>Articles</h1>
-  <dl class="sub-nav panel radius">
-    <dt>Articles</dt>
+  <dl class="sub-nav label round secondary">
+    <dt>Newest</dt>
       <% @articles.first(4).each do |article| %>
         <dd><%= link_to "#{article.title}", "##{article.title}" %></dd>
       <% end %>
   </dl>
   
   <% @articles.each do |article| %>
-  <article class='website-example'>
+  <article class='article-panel'>
     <ul>
-      <h4><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h4>
+      <h3 class="article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
       <div class=""><%= markdown(article.body) %></div><br>
-      <button class="button round info"><%= link_to "View", article_path(article, anchor: "disqus_thread") %></button>
+      <div><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread"), class: "button round info" %></div>
     </ul>
     <hr>
   </article>
   <% end %>
 
   <p>
-    <%= link_to "New Article", new_article_path %>
+    <%= link_to "Create New Article", new_article_path, class: "button radius warning" %>
   </p>

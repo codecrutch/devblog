@@ -1,15 +1,41 @@
-<div id="content">
-  <% content_for(:title) do @article.title %>
-  <% end %>
-<h1><%= @article.title %></h1>
-    <ul><small>Author: Sean Snyder<br> Posted: <%= time_ago_in_words(@article.created_at).capitalize + " ago" %></small>
-<p>
-  <%= markdown(@article.body)%>
-</p>
-</div>
-<%= link_to "Home", articles_path %> |
-<%= link_to "Edit", edit_article_path %> |
-<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?"}%>
+<article id="content" class="article-panel">
+  <% content_for(:title) {@article.title} %>
+  <div id="article-info" class="row">
+    
+    
+    <div class="small-2 columns">
+      <div class="row">
+          <div class="small-12 columns">
+            <img src="https://avatars1.githubusercontent.com/u/6605437?v=3&s=460" width="100" height="100" class="th label round warning">
+          </div>
+      </div>
+    </div>
+    
+    <div class="small-10 columns">
+      <h1 class="article-title"><%= @article.title %></h1>
+    </div>
+    
+    <div id="article-author" class="row">
+      <div class="small-12 columns">
+        <small>Author: Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at).capitalize + " ago" %></small>
+        <br />
+        Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%>
+      </div>
+    </div>
+    <div id ="article-body" class="row">
+      <div class="small-12 columns inline-right">
+        <hr />
+        <p><%= markdown(@article.body)%></p>
+      </div>
+    </div>
+</article>
+
+<ul class="button-group round">
+  <li><%= link_to "Home", articles_path, class: "button" %></li>
+  <li><%= link_to "Edit", edit_article_path, class: "button" %></li>
+  <li><%= link_to "Delete", article_path(@article), class: "button", method: :delete, data: { confirm: "Are you sure?"}%></li>
+</ul>
+
 <div id="comments">
-<%= render 'disqus' %>
+  <%= render 'disqus' %>
 </div>
