@@ -15,6 +15,9 @@
  *= require foundation_and_overrides
 
  */
+body {
+  background: lightgray;
+}
 
 img[alt="blog-pic"] { 
   max-width:  200px; 
@@ -22,7 +25,29 @@ img[alt="blog-pic"] {
 }
 
 #content {
-  padding: 200px;
-  border-radius: 200;
-  background: antique;
+  margin-top: 3rem;
+}
+
+#footer {
+  float: left;
+  padding: 55px 0;
+  min-width: 100%;
+  background: none repeat scroll 0% 0% #085A78;
+}
+.article-panel {
+
+  background: #fff;
+
+  padding: 1.75rem;
+
+  margin-top: 2.5rem;
+
+  margin-bottom: 2.5rem;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+}
+
+.article-title {
+  text-decoration: underline;
+  font-style: italic;
 }

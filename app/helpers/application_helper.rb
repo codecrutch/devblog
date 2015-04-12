@@ -19,4 +19,8 @@ module ApplicationHelper
 
       markdown.render(text).html_safe
     end
+  
+    def current_time
+      Time.now
+    end
 end
