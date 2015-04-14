@@ -13,10 +13,9 @@
   </head>
 
   <body class='antialiased hide-extras'>
-    
-    <div class='row'>
-      <%= render 'navbar' %>
-    </div>
+    <nav>
+      <div class='row'><%= render 'navbar' %></div>
+    </nav>
     
     <div id="page-container" class='row'>    
       <div id="content" class='small-12 columns'><%= yield %></div>
@@ -24,11 +23,8 @@
     </div>
       
     <footer>
-      <div id="footer" class="row">
-        <div class="small-4 columns"><p></p></div>
-        <div class="small-4 columns"><center><p class="button round">&copy Snyder-Dev.com - <%= current_time.year %></p></center></div>
-        <div class="small-4 columns"><p>Running on Rails 4.2</p></div>
-      </div>
+      <div id="top-footer" class="row"><%= render 'top_footer' %></div>
+      <div id="footer" class="row"><%= render 'footer' %></div>
     </footer>
   
     <%= render 'commentcounter' %>
