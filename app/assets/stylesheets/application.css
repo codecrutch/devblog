@@ -40,6 +40,7 @@ img[alt="blog-pic"] {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+  border-radius: 12px;
 }
 
 .article-title {
@@ -48,8 +49,16 @@ img[alt="blog-pic"] {
 }
 
 #top-footer {
+  text-align: center;
+  text-decoration: none;
   float: left;
   padding: 15px 0;
   min-width: 100%;
   background: none repeat scroll 0% 0% #008FB2;
+}
+
+#top-footer a {
+  border-radius: 5px;
+  padding: .5rem;
+  background: none repeat scroll 0% 0% darkgray;
 }
