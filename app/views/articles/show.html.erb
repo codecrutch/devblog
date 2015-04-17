@@ -1,5 +1,5 @@
 <article id="content" class="article-panel">
-  <% content_for(:title) {@article.title} %>
+  <% provide( :title, @article.title ) %>
   <div id="article-info" class="row">
     
     
