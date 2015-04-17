@@ -1,4 +1,5 @@
-Edit
+<% provide( :title, "Edit #{@article.title}" )%>
+<h2>Make Changes to <em>"<%= @article.title %>"</em></h2>
 
 <%= render 'updateform' %>
 <%= link_to "Back", article_path(@article)%>

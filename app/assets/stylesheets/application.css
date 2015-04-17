@@ -62,3 +62,13 @@ img[alt="blog-pic"] {
   padding: .5rem;
   background: none repeat scroll 0% 0% darkgray;
 }
+
+.form-title {
+  width: 922px;
+  height: 30px;
+}
+
+.form-body {
+  width: 966px;
+  height: 301px;
+}
