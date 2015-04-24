@@ -24,6 +24,9 @@ module ApplicationHelper
         Time.now
     end
     
+    def full_post_date(article)
+        article.created_at.strftime("%B %d, %G")
+    end
     def titleize(page_title = "")
       base_title = "Snyder-Dev"
       if page_title.empty?
