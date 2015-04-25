@@ -1,6 +1,6 @@
 <br>
 <% provide(:title, "Home") %>
-<h1>What's Happening...</h1>
+<h1>Learning Ruby & Rails</h1>
   <dl class="sub-nav label round secondary">
     <dt>Newest</dt>
       <% @articles.first(4).each do |article| %>
@@ -21,5 +21,5 @@
   <% end %>
 
   <p>
-    <%= link_to "Create New Article", new_article_path, class: "button radius warning" %>
+    <%= link_to "Create New Article", new_article_path, class: "button radius warning article-panel" %>
   </p>
