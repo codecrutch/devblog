@@ -57,9 +57,9 @@ img[alt="blog-pic"] {
 }
 
 #top-footer a {
-  border-radius: 5px;
-  padding: .5rem;
-  background: none repeat scroll 0% 0% white;
+  border-radius: 8px;
+  padding: .7rem;
+  color: white;
 }
 
 .form-title {
