@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Article, :type => :model do
+describe Article, :models do
   before :each do
     @article = Article.create!(title: "New Blog Post", body: "A bunch of Lorem Ipsum")
   end
