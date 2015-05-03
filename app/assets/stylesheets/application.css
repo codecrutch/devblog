@@ -26,7 +26,10 @@ img[alt="blog-pic"] {
 #content {
   margin-top: 3rem;
 }
-
+.logo {
+  width: 10rem;
+  height: 10rem;
+}
 #footer {
   float: left;
   padding: 55px 0;
