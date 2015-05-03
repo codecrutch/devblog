@@ -1,22 +1,18 @@
-<br>
 <% provide(:title, "Home") %>
-<div class="content-panel">
-<h1>Learning Ruby & Rails</h1>
-  <dl class="sub-nav label round secondary">
-    <dt>Newest</dt>
-      <% @articles.first(4).each do |article| %>
-        <dd><%= link_to "#{article.title}", "##{article.title}" %></dd>
-      <% end %>
-  </dl>
-  </br>
-  <% @articles.each do |article| %>
-  <article class="article-panel">
-    <ul class="row">
-      <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
-      <div class="small-4 columns"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
-      <p class="row"></p>
-      <p class="small-12 columns"><%= full_post_date(article) %></p>
-    </ul>
-  </article>
-<% end %>
+<div class="content-panel row">
+    <h1>Learning Ruby & Rails</h1>
+    
+    <% @articles.each do |article| %>
+       <article class="article-panel">
+          <ul class="row">
+              
+              <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
+              <div class="small-4 columns"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
+              
+              <p class="row"></p>
+              <p class="small-12 columns"><%= full_post_date(article) %></p>
+          
+          </ul>
+       </article>
+    <% end %>
 </div>
