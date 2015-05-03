@@ -1,6 +1,6 @@
 <br>
 <% provide(:title, "Home") %>
-<div class="article-panel">
+<div class="content-panel">
 <h1>Learning Ruby & Rails</h1>
   <dl class="sub-nav label round secondary">
     <dt>Newest</dt>
@@ -10,7 +10,7 @@
   </dl>
   </br>
   <% @articles.each do |article| %>
-  <article>
+  <article class="article-panel">
     <ul class="row">
       <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
       <div class="small-4 columns"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
