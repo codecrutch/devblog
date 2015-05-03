@@ -13,32 +13,26 @@
 
   <body class='antialiased hide-extras'>
     <nav>
-      <div class='row'><%= render 'navbar' %></div>
+       <div class='row'>
+         <%= render 'navbar' %>
+       </div>
     </nav>
-   
+
     <div id="page-container" class='row'>
-      <div class="small-2 columns">
-        <div id="sidebar">
-          <ul>
-            <li class="category">Website</li>
-            <li><%= link_to "Articles", articles_path %></li>
-          </ul>
-          <ul>
-            <li class="category">Social</li>
-            <li><%= link_to "Twitter", "http://www.twitter.com/SnyderRuby" %></li>
-            <li><%= link_to "Github", "http://www.github.com/Snyder-" %></li>
-            <li><%= link_to "New Article", new_article_path %></li>
-          </ul>
-          </div>
-      </div>
-      <div id="content" class='small-10 columns'><%= yield %></div>
+       
+       <div class="large-3 columns">
+         <%= render 'sidebar' %>
+       </div>
+      
+       <div id="content" class='small-12 large-9 columns'>
+         <%= yield %>
+       </div>
     </div>
+    
     <footer>
       <div id="top-footer" class="row"><%= render 'top_footer' %></div>
       <div id="footer" class="row"><%= render 'footer' %></div>
     </footer>
-
-    <%= render 'commentcounter' %>
 
   </body>
 </html>

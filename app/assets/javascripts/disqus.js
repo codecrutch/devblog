@@ -1,6 +1,4 @@
-<% # Changes the links to display the disqus comment counts. %>
 
-<script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'snyder-dev';
     
@@ -11,4 +9,3 @@
         s.src = '//' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
-</script>
