@@ -1,5 +1,6 @@
 <br>
 <% provide(:title, "Home") %>
+<div class="article-panel">
 <h1>Learning Ruby & Rails</h1>
   <dl class="sub-nav label round secondary">
     <dt>Newest</dt>
@@ -7,19 +8,15 @@
         <dd><%= link_to "#{article.title}", "##{article.title}" %></dd>
       <% end %>
   </dl>
-  
+  </br>
   <% @articles.each do |article| %>
-  <article class='article-panel'>
-    <ul>
-      <h2 class="article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h2>
-      <p><strong>Sean Snyder</strong> | <%= full_post_date(article)%></p>
-      <div class=""><%= markdown(article.body) %></div><br>
-      <div><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread"), class: "button round info" %></div>
+  <article>
+    <ul class="row">
+      <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
+      <div class="small-4 columns"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
+      <p class="row"></p>
+      <p class="small-12 columns"><%= full_post_date(article) %></p>
     </ul>
-    <hr>
   </article>
-  <% end %>
-
-  <p>
-    <%= link_to "Create New Article", new_article_path, class: "button radius warning article-panel" %>
-  </p>
+<% end %>
+</div>

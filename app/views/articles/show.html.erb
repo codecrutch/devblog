@@ -1,8 +1,8 @@
 <article id="content" class="article-panel">
   <% provide( :title, @article.title ) %>
   <div id="article-info" class="row">
-    
-    
+
+
     <div class="small-2 columns">
       <div class="row">
           <div class="small-12 columns">
@@ -10,15 +10,14 @@
           </div>
       </div>
     </div>
-    
+
     <div class="small-10 columns">
       <h1 class="article-title"><%= @article.title %></h1>
     </div>
-    
+
     <div id="article-author" class="row">
       <div class="small-12 columns">
-        <small>Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at).capitalize + " ago" %></small>
-        <br />
+        <p>Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at) + " ago" %></p>
         Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%>
       </div>
     </div>
