@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'foundation-rails'
 gem 'redcarpet'
 gem 'jquery-rails'
-gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -18,6 +18,6 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  gem 'spring', '~> 1.3.5'
 end
 
