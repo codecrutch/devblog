@@ -1,23 +1,17 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+ 
+ $primary-color: #8D1B18;
+ $secondary-color: #C62F2B;
+ $panel-color: #BC615F;
+ $article-color: #FFD9D8;
+ $background-color: #DDAAA9;
 
 body {
-  background: lightgray;
+  background: $background-color;
 }
 img[alt="blog-pic"] {
   max-width:  200px;
@@ -34,7 +28,7 @@ img[alt="blog-pic"] {
   float: left;
   padding: 55px 0;
   min-width: 100%;
-  background: none repeat scroll 0% 0% #085A78;
+  background: none repeat scroll 0% 0% $primary-color;
 }
 .content-panel {
   background: #eee;
@@ -45,7 +39,7 @@ img[alt="blog-pic"] {
   border-radius: 12px;
 }
 .article-panel {
-  background: #fff;
+  background: white;
   padding: 1.75rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -64,14 +58,14 @@ article-title {
   float: left;
   padding: 15px 0;
   min-width: 100%;
-  background: none repeat scroll 0% 0% #008FB2;
+  background: none repeat scroll 0% 0% $secondary-color;
+  a {
+    border-radius: 8px;
+    padding: .7rem;
+    color: white;
+  }
 }
 
-#top-footer a {
-  border-radius: 8px;
-  padding: .7rem;
-  color: white;
-}
 #sidebar {
   position: absolute;
   top: 200px;
