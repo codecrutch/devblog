@@ -3,7 +3,7 @@ module ApplicationHelper
     options = {
         filter_html:         true,
         hard_wrap:           true,
-        link_attributes:     { rel: 'nofollow', target: "_blank" },
+        link_attributes:     { rel: 'nofollow', target: '_blank' },
         space_after_headers: true,
         fenced_code_blocks:  true
     }
@@ -28,8 +28,8 @@ module ApplicationHelper
     article.created_at.strftime("%B %d, %Y")
   end
 
-  def titleize(page_title = "")
-    base_title = "Snyder-Dev"
+  def titleize(page_title = '')
+    base_title = 'Snyder-Dev'
     if page_title.empty?
       base_title
     else
