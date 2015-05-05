@@ -1,4 +1,4 @@
-<article id="content" class="article-panel">
+<article id="content" class="stitch pad">
   <% provide( :title, @article.title ) %>
   <div id="article-info" class="row">
 
@@ -21,10 +21,10 @@
         Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%>
       </div>
     </div>
-    <div id ="article-body" class="row">
+    <div class="row">
       <div class="small-12 columns inline-right">
         <hr />
-        <p><%= markdown(@article.body)%></p>
+        <%= markdown(@article.body)%>
       </div>
     </div>
 </article>

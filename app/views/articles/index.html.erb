@@ -3,7 +3,7 @@
     <h1>Learning Ruby & Rails</h1>
     
     <% @articles.each do |article| %>
-       <article class="article-panel">
+       <article class="stitch">
           <ul class="row">
               
               <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
