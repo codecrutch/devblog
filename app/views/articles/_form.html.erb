@@ -12,15 +12,11 @@
   <div>
     <%= f.text_field :title %>
   </div>
-  <div>
-    <%= f.label :body %>
-  </div>
+
   <div>
     <%= f.cktext_area :body, rows: 10 %>
   </div>
-  <div>
-    <%= f.submit %>
-  </div>
+  <br>
   <ul class="button-group round">  
     <li><%= f.submit class: "button round"%></li>
     <li><%= link_to "Cancel", articles_path, class: "button warning" %></li>
