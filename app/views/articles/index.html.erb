@@ -1,13 +1,14 @@
 <% provide(:title, "Home") %>
-<div class="row">
-<h3><pre><code class="language-ruby">
+<div class="small-12 columns">
+<h3 id="index-banner" ><pre><code class="language-ruby">
   class LearningRubyRails
     def initialize(blog)
       @blog = blog
       @time = <%= current_time.strftime("%B %d, %Y") %>
     end
 </code></pre></h3>
-    
+</div>
+<div class="small-12 columns">    
     <% @articles.each do |article| %>
        <article class="stitch">
           <ul class="row">
@@ -21,4 +22,5 @@
           </ul>
        </article>
     <% end %>
+  </div>
 </div>
