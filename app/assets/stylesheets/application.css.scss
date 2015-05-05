@@ -53,6 +53,20 @@ article-title {
 width: 100%;
 }
 
+#about-author {
+  position: relative;
+  height: 300px;
+}
+
+#author-image {
+  top: 70px;
+  left: 70px;
+}
+
+figure h3 {
+  top: 70px;
+}
+
 #top-footer {
   text-align: center;
   text-decoration: none;
