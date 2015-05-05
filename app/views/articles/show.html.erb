@@ -24,7 +24,7 @@
     <div class="row">
       <div class="small-12 columns inline-right">
         <hr />
-        <%= markdown(@article.body)%>
+        <%= @article.body.html_safe %>
       </div>
     </div>
 </article>

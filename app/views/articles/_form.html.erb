@@ -1,18 +1,26 @@
-<%= form_for :article, url: articles_path do |f| %>
-  <% if @article.errors.any? %>
-  <%= "Cannot save due to: #{pluralize(@article.errors.count, "error")}" %>
-  <p><% @article.errors.each do |error,msg| %>
-    <ul id="error"><%= "#{error.capitalize} #{msg}" %></ul>
+<% if @article.errors.any? %>
+  <ul>
+    <%= @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
     <% end %>
-  </p>
-  <% end %>
-  <p>
+  </ul>
+<% end %>
+<%= form_for @article do |f| %>
+  <div>
     <%= f.label :title %>
-    <%= f.text_field :title, class: "form-title" %>
-  <p>
+  </div>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+  <div>
     <%= f.label :body %>
-    <%= f.text_area :body, class: "form-body" %>
-  <p>
+  </div>
+  <div>
+    <%= f.cktext_area :body, rows: 10 %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
   <ul class="button-group round">  
     <li><%= f.submit class: "button round"%></li>
     <li><%= link_to "Cancel", articles_path, class: "button warning" %></li>
