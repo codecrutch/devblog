@@ -2,6 +2,10 @@ module ApplicationHelper
   def current_time
     Time.now
   end
+  
+  def current_date
+    Date.now
+  end
 
   def full_post_date(article)
     article.created_at.strftime("%B %d, %Y")
