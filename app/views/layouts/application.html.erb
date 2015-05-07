@@ -12,11 +12,9 @@
   </head>
 
   <body class="wrapper">
-    
     <nav><%= render 'navbar' %></nav>
-    
+    <%= render 'blog_banner' %>
     <div class="row">
-      <%= render 'blog_banner' %>
       <div id="content" class="small-12 columns article-panel"> <%= yield %> </div>
       <div class="small-12 columns"><%= render 'author' %></div>
     </div>

@@ -1,9 +1,7 @@
-<div class="fixed">
+<div class="contain-to-grid">
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
-      <li class="logo">
-        <h1><%= link_to image_tag("snyderdevlogo.png"), articles_path, title: "Snyder-Dev Blog" %></h1>
-      </li>
+      <li class="logo"><%= link_to image_tag("snyderdevlogo.png"), root_path, title: "Snyder-Dev Blog" %></li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
   
@@ -12,7 +10,7 @@
         <li class="active"><%= link_to "Home", articles_path %></li>
         <li><%= link_to "News", articles_path %></li>
         <li><%= link_to "About Us", articles_path %></li>
-        <li><%= link_to "Contact Us", articles_path %></li>
+        <li><%= link_to "Contact Us", "#contact" %></li>
       </ul>
     </section>
   </nav>
