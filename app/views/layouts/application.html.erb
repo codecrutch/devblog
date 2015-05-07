@@ -11,8 +11,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class='row'>
+  <body class="wrapper">
     <nav><%= render 'navbar' %></nav>
+    <div class="row">
     <div class="small-4 columns show-for-medium-up">
     <pre class="article-panel"><code>class LearningRubyRails
   def initialize(blog)
@@ -23,6 +24,7 @@
     </div>
     <div id="content" class="small-12 columns article-panel"> <%= yield %> </div>
     <div class="small-12 columns"><%= render 'author' %></div>
-    <div id="footer" class="small-12 columns"><%= render 'footer' %></div>
+  </div>
+   <div id="footer"><%= render 'footer' %></div>
   </body>
 </html>
