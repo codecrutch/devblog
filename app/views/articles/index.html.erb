@@ -1,29 +1,13 @@
 <% provide(:title, "Home") %>
-<div class="small-12 columns">
-<h3 id="index-banner" ><pre><code class="language-ruby">
-  class LearningRubyRails
-    def initialize(blog)
-      @blog = blog
-      @time = <%= current_time.strftime("%B %d, %Y") %>
-    end
-</code></pre></h3>
+<div class="show-for-small-only">
+  <h1>Latest Articles</h1>
 </div>
 
-<div class="small-12 columns">    
-    <% @articles.each do |article| %>
-       <article class="stitch">
-          <ul class="row">
-              
-              <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
-              <div class="small-4 columns"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
-              
-              <p class="row"></p>
-              <p class="small-12 columns"><%= full_post_date(article) %></p>
-          
-          </ul>
-       </article>
-    <% end %>
-  </div>
-</div>
-
-<div class="small-12 columns"><%= render 'author' %></div>
+<% @articles.each do |article| %>
+   <article class="small-12 columns stitch">
+          <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
+          <div class="small-4 columns show-for-medium-up"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
+          <p class="small-6 columns show-for-medium-up"><%= full_post_date(article) %></p>
+          <p class="small-6 columns show-for-medium-up"><%= article.preview %></p>
+   </article>
+<% end %>

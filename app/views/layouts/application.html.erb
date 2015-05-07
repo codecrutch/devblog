@@ -11,20 +11,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class='article'>
-    <nav>
-       <div class='row'>
-         <%= render 'navbar' %>
-       </div>
-    </nav>
-    
-        <div class="row stitch"> <%= yield %> </div>
-  
-  </br>
-    <footer>
-      <div id="top-footer" class="row"><%= render 'top_footer' %></div>
-      <div id="footer" class="row"><%= render 'footer' %></div>
-    </footer>
-
+  <body class='row'>
+    <nav><%= render 'navbar' %></nav>
+    <div class="small-4 columns show-for-medium-up">
+    <pre class="article-panel"><code>class LearningRubyRails
+  def initialize(blog)
+      @blog = blog
+      @time = '<%= current_time.strftime("%B %d, %Y") %>'
+  end
+ end</code></pre>
+    </div>
+    <div id="content" class="small-12 columns article-panel"> <%= yield %> </div>
+    <div class="small-12 columns"><%= render 'author' %></div>
+    <div id="footer" class="small-12 columns"><%= render 'footer' %></div>
   </body>
 </html>

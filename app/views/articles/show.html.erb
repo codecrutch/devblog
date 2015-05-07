@@ -1,41 +1,13 @@
-<article id="content" class="stitch pad">
-  <% provide( :title, @article.title ) %>
-  <div id="article-info" class="row">
-
-
-    <div class="small-2 columns">
-      <div class="row">
-          <div class="small-12 columns">
-          </div>
-      </div>
-    </div>
-
-    <div class="small-10 columns">
-      <h1 class="article-title"><%= @article.title %></h1>
-    </div>
-
-    <div id="article-author" class="row">
-      <div class="small-12 columns">
-        <p>Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at) + " ago" %></p>
-        Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-12 columns inline-right">
-        <hr />
+<% provide( :title, @article.title ) %>
+<article class="article-panel">
+      <h1><%= @article.title %></h1>
+      <p>Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at) + " ago" %><br>
+        Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%></p>
         <%= @article.body.html_safe %>
-      </div>
-    </div>
-</article>
-
-<ul class="button-group round">
+  </article>
+<ul class="small-12 columns button-group round" style="margin-top: 1rem;">
   <li><%= link_to "Home", articles_path, class: "button" %></li>
   <li><%= link_to "Edit", edit_article_path, class: "button" %></li>
   <li><%= link_to "Delete", article_path(@article), class: "button", method: :delete, data: { confirm: "Are you sure?"}%></li>
 </ul>
-
-<div id="comments">
-  <%= render 'disqus' %>
-</div>
-</div>
-<%= render 'author' %>
+<div id="comments"><%= render 'disqus' %></div>
