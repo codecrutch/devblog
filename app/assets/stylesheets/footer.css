@@ -5,6 +5,11 @@ footer{
   bottom: 0;
 }
 
+.footer-logo {
+  height: 50%;
+  width: 50%;
+}
+
 @media (max-height:800px){
 	footer { position: static; }
 	header { padding-top:40px; }
@@ -138,13 +143,13 @@ footer{
 
 .footer-distributed .footer-icons a{
 	display: inline-block;
-	width: 35px;
-	height: 35px;
+	width: 45px;
+	height: 45px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  transparent;
 	border-radius: 2px;
 
-	font-size: 20px;
+	font-size: 40px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;

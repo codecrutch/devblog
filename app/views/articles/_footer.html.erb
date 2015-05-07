@@ -2,18 +2,14 @@
 
 	<div class="footer-left">
 
-		<h3>Snyder<span>Development</span></h3>
+		<h3><%= image_tag "snyderdevlogo.png", class: 'footer-logo' %></h3>
 
 		<p class="footer-links">
 			<a href="#">Home</a>
 			·
 			<a href="#">Blog</a>
 			·
-			<a href="#">Pricing</a>
-			·
 			<a href="#">About</a>
-			·
-			<a href="#">Faq</a>
 			·
 			<a href="#">Contact</a>
 		</p>
@@ -24,18 +20,18 @@
 	<div class="footer-center">
 
 		<div>
-			<i class="fa fa-map-marker"></i>
-			<p><span>21 Revolution Street</span> Boston, Ma</p>
+			<i class="fi-marker"></i>
+			<p>Boston, Massachusetts</p>
 		</div>
 
 		<div>
-			<i class="fa fa-phone"></i>
-			<p>+1 555 123456</p>
+			<i class="fi-telephone"></i>
+			<p>+1 (603) 777-2215</p>
 		</div>
 
 		<div>
-			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">support@company.com</a></p>
+			<i class="fi-mail"></i>
+			<p><a href="mailto:sean.snyder@snyder-dev.com">support@snyder-dev.com</a></p>
 		</div>
 
 	</div>
@@ -43,17 +39,14 @@
 	<div class="footer-right">
 
 		<p class="footer-company-about">
-			<span>About the company</span>
-			Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+			<span>About</span>
+			A blog describing the chronicles of a career change to programming and development.
 		</p>
 
 		<div class="footer-icons">
-
-			<a href="#"><i class="fa fa-facebook"></i></a>
-			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-linkedin"></i></a>
-			<a href="#"><i class="fa fa-github"></i></a>
-
+            <%= link_to '<i class="fi-social-twitter"></i>'.html_safe, 'http://www.twitter.com/SnyderRuby' %>
+            <%= link_to '<i class="fi-social-github"></i>'.html_safe, 'http://www.github.com/Snyder-' %>
+            <%= link_to '<i class="fi-social-facebook"></i>'.html_safe, 'http://www.twitter.com/SnyderRuby' %>
 		</div>
 
 	</div>
