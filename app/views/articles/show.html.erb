@@ -2,7 +2,7 @@
 <article class="article-panel">
       <h1><%= @article.title %></h1>
       <p>Sean Snyder | Posted: <%= time_ago_in_words(@article.created_at) + " ago" %><br>
-        Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%></p>
+        Follow at: <%= link_to "@SnyderRuby", "http://www.twitter.com/SnyderRuby", target: "_blank", class: "label round"%><hr></p>
         <%= @article.body.html_safe %>
   </article>
 <ul class="small-12 columns button-group round" style="margin-top: 1rem;">

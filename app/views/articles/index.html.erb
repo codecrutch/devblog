@@ -2,12 +2,12 @@
 <div class="show-for-small-only">
   <h1>Latest Articles</h1>
 </div>
-
+  <%= link_to "New Post", new_article_path %>
 <% @articles.each do |article| %>
    <article class="small-12 columns stitch">
-          <h3 class="small-8 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
-          <div class="small-4 columns show-for-medium-up"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
-          <p class="small-6 columns show-for-medium-up"><%= full_post_date(article) %></p>
-          <p class="small-6 columns show-for-medium-up"><%= article.preview %></p>
+     <h6 class="small-12 columns"><%= full_post_date(article) %></h6>
+      <h3 class="small-12 columns article-title"><%= link_to "#{article.title}", article_path(article), id: "#{article.title}" %></h3>
+      <div class="small-12 columns show-for-medium-up"><%= link_to "Leave a comment...", article_path(article, anchor: "disqus_thread") %></div>
+      <p class="small-12 columns show-for-medium-up"><%= article.preview %></p>
    </article>
 <% end %>

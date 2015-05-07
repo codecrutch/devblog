@@ -12,19 +12,15 @@
   </head>
 
   <body class="wrapper">
+    
     <nav><%= render 'navbar' %></nav>
+    
     <div class="row">
-    <div class="small-4 columns show-for-medium-up">
-    <pre class="article-panel"><code>class LearningRubyRails
-  def initialize(blog)
-      @blog = blog
-      @time = '<%= current_time.strftime("%B %d, %Y") %>'
-  end
- end</code></pre>
+      <%= render 'blog_banner' %>
+      <div id="content" class="small-12 columns article-panel"> <%= yield %> </div>
+      <div class="small-12 columns"><%= render 'author' %></div>
     </div>
-    <div id="content" class="small-12 columns article-panel"> <%= yield %> </div>
-    <div class="small-12 columns"><%= render 'author' %></div>
-  </div>
+   
    <div id="footer"><%= render 'footer' %></div>
   </body>
 </html>

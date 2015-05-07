@@ -12,8 +12,13 @@
   <div>
     <%= f.text_field :title %>
   </div>
-
   <div>
+    <%= f.label :description %>
+  </div>
+  <div>
+    <%= f.text_field :description %>
+  </div>
+  <div> 
     <%= f.cktext_area :body, rows: 10 %>
   </div>
   <br>
