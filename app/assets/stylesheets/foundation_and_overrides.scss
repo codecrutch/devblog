@@ -1383,15 +1383,15 @@ $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-top-bar-classes: $include-html-classes;
+$include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: transparent;
 // $topbar-bg: $secondary-color;
 
 // Height and margin
-$topbar-height: rem-calc(65);
-// $topbar-margin-bottom: 0;
+// $topbar-height: rem-calc(65);
+// $topbar-margin-bottom: .1rem;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;

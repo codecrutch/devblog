@@ -9,6 +9,6 @@ class Article < ActiveRecord::Base
   end
   
   def new?
-    (self.created_at + 3.days) > Time.now
+    (self.created_at + 7.days) > Time.now
   end
 end
