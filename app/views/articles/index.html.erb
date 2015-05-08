@@ -3,8 +3,8 @@
   <h1>Latest Articles</h1>
 </div>
   <%= link_to "New Post", new_article_path %>
+<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
   
-<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-equalizer-watch>
 <% @articles.each do |article| %>
 <li>
 <article class="ribbon-wrapper small-12 columns stitch">
