@@ -15,6 +15,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma', group: :production
 gem 'responders'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
