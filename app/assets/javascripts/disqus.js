@@ -11,7 +11,6 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 */
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-s.async = true;
 
 s.src = '//snyder-dev.disqus.com/embed.js';
 
