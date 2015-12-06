@@ -48,10 +48,6 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
-  config.serve_static_assets = true
-  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
-  config.assets.compile = false # we don't want compilation fallbacks
-
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
